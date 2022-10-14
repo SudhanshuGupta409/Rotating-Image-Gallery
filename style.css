@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    justify-content: center;
+    background: black;
+    overflow: hidden;
+}
+.imageContainer{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.5s;
+}
+.imageContainer span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(calc(var(--i)*36deg)) translateZ(400px);
+}
+.imageContainer span img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.btnContainer{
+    position: relative;
+    width: 80%;
+}
+.btn{
+    position: absolute;
+    bottom: -80px;
+    background-color: slateblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+.btn:hover{
+    color: slateblue;
+    background-color: white;
+    transition: 0.5s;
+}
+#prev{
+    left: 20%;
+}
+#next{
+    right: 20%;
+}
